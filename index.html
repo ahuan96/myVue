@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box{
+        margin-top:100px;
+        text-align: center;
+      }
+      #box button{  
+        color: #0084ff;
+        border-color: #0084ff;
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div  id='box'>
+      <input  v-model="title"></input>
+      <p>{{title}}</p>
+      <BUtton v-on:click="clickMe">快来点我</BUtton>
+    </div>
+  </body>
+  <script src="./observer.js"></script>
+  <script src="./watcher.js"></script>
+  <script src="./compile.js"></script>
+  <script src="./index.js"></script>
+  <script type="text/javascript">
+    const vm = new mVue({
+      el:'#box',
+      data: {
+        title: '有一种放手叫余生不打扰'
+      },
+      methods:{
+        clickMe(){
+          this.title = '你点了我'
+        }
+      }
+    })
+
+    setTimeout(()=>{
+      vm.id = 888
+    },1000)
+  </script>
+</html>
