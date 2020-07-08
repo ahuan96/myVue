@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      #box{
+      #app{
         margin-top:100px;
         text-align: center;
       }
-      #box button{  
+      #app button{  
         color: #0084ff;
         border-color: #0084ff;
         background: #fff;
@@ -17,7 +17,7 @@
     </style>
   </head>
   <body>
-    <div  id='box'>
+    <div  id='app'>
       <input  v-model="title"></input>
       <p>{{title}}</p>
       <BUtton v-on:click="clickMe">快来点我</BUtton>
@@ -29,7 +29,7 @@
   <script src="./index.js"></script>
   <script type="text/javascript">
     const vm = new mVue({
-      el:'#box',
+      el:'#app',
       data: {
         title: '有一种放手叫余生不打扰'
       },
